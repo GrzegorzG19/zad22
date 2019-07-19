@@ -8,13 +8,13 @@ import java.util.Set;
 @Repository
 public class ProductRepository {
     private Set<Product> products;
-    private double sum=0;
+    private double sum = 0;
 
     public ProductRepository() {
         products = new HashSet<>();
         products.add(new Product("Ziemniak", 13.42));
         products.add(new Product("Pomidor", 23.32));
-      }
+    }
 
     public Set<Product> getProducts() {
         return products;
@@ -26,7 +26,7 @@ public class ProductRepository {
 
     public Product findByName(String name) {
         for (Product Product : products) {
-            if(Product.getName().equals(name)) {
+            if (Product.getName().equals(name)) {
                 return Product;
             }
         }
@@ -37,11 +37,16 @@ public class ProductRepository {
     public Set<Product> findAll() {
         return products;
     }
-    public double sum(){
+
+    public double sum() {
         double suma = 0;
         for (Product product : products) {
-            suma+=product.getPrice();
+            suma += product.getPrice();
         }
         return suma;
+    }
+
+    public void add(Product user) {
+        products.add(user);
     }
 }

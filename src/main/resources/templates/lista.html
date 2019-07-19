@@ -17,9 +17,9 @@
     <a class="products" th:each="product: ${products}">
         <a th:text="${product.getName()}">asa</a>
         <a th:text="${product.getPrice()}">asa</a> <br/>
-        <a th:text="${product.getPrice() + product.getPrice()}">asa</a> <br/>
+        <br/>
     </a>
-
+    <span>Suma produktow: </span><a th:text="${sum}">asa</a>
 </div>
 </body>
 </html>

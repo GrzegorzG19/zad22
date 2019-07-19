@@ -11,7 +11,7 @@
     <title>Tabela</title>
 </head>
 <body>
-<table>
+<table class="table" table-bordered table-striped>
     <tr>
         <th>NAME</th>
         <th>PRICE</th>
@@ -20,7 +20,13 @@
     <tr class="products" th:each="product: ${products}">
         <td th:text="${product.name}">Onions</td>
         <td th:text="${product.price}">2.41</td>
+        <br/>
     </tr>
+    <tr>
+        <td>Suma Cen:</td>
+        <td th:text="${sum}">a</td>
+    </tr>
+
 </table>
 </body>
 </html>
